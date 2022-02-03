@@ -13,7 +13,9 @@
     curl_setopt($getpass, CURLOPT_URL, $url);
     $header = ["Authorization: Bearer ".$bear_token['access_token'], "Content-Type: application/json"];
     curl_setopt($getpass, CURLOPT_HTTPHEADER, $header);
+    curl_setopt($getpass, CURLOPT_RETURNTRANSFER, true);
     $output = curl_exec($getpass);
+    curl_close($getpass);
     $output = json_decode($output, true);
     return $output['value'];
   }
