@@ -1,8 +1,8 @@
 <?php 
-    
+  require_once "getkeyvault.php";
   $host = 'ap-cloud-quiz-mysql.mysql.database.azure.com';
   $username = 'azuresqladmin@ap-cloud-quiz-mysql';
-  $password = '#Marco121521';
+  $password = keyvault();
   $db_name = 'ap-cloud-quiz-mysqldb';
 
   //Initializes MySQLi
