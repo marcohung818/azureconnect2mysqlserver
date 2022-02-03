@@ -9,7 +9,7 @@
     curl_close($curl);
     $bear_token = json_decode($bear_token, true);
     $getpass = curl_init();
-    $url = "https://ap-cloud-quiz-vaultkey.vault.azure.net/secrets/ap-cloud-quiz-key-value/44b7dccdcd42445aa1c1f2b0a8c8d0a8?api-version=7.1";
+    $url = "https://ap-cloud-quiz-vaultkey.vault.azure.net/secrets/ap-cloud-quiz-key-value/b81b69558c024d61828479ef79667ef8?api-version=7.1";
     curl_setopt($getpass, CURLOPT_URL, $url);
     $header = ["Authorization: Bearer ".$bear_token['access_token'], "Content-Type: application/json"];
     curl_setopt($getpass, CURLOPT_HTTPHEADER, $header);
